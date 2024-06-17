@@ -1,17 +1,17 @@
-# Use an official Python runtime as a parent image
+# 使用官方的Python镜像作为基础镜像
 FROM python:3.9-slim
 
-# Set the working directory
+# 设置工作目录
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# 将当前目录下的所有文件复制到工作目录中
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
+# 安装项目的依赖库
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 7860 available to the world outside this container
+# 暴露Gradio默认的端口
 EXPOSE 7860
 
-# Run app.py when the container launches
+# 启动 Gradio 应用
 CMD ["python", "app/app.py"]
