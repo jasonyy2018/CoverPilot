@@ -1,7 +1,11 @@
 __pycache__
 *.pyc
 *.pyo
-.git
-.vscode
-.DS_Store
+*.pyd
+*.db
+*.sqlite3
+*.log
 .env
+docker-compose.yml
+debug/
+tests/
